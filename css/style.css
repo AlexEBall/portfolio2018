@@ -300,7 +300,7 @@ nav {
     margin-left: .5em; }
 
 @supports (display: grid) {
-  @media only screen and (max-width: 950px) {
+  @media only screen and (max-width: 60em) {
     .portfolio-items {
       grid-template-columns: repeat(2, 1fr); } }
   .portfolio-items .portfolio-item.featured {
@@ -327,6 +327,9 @@ nav {
       grid-template-rows: .3fr .5fr .2fr;
       grid-template-columns: 4fr 1fr;
       grid-gap: 1rem; }
+      @media only screen and (max-width: 50em) {
+        .portfolio-modal.is-open {
+          grid-template-columns: 2fr 1fr; } }
   .modal-close {
     background: white;
     position: fixed;
@@ -339,12 +342,21 @@ nav {
     border-radius: 50%;
     cursor: pointer;
     box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.5); }
+    @media only screen and (max-width: 60em) {
+      .modal-close {
+        width: 4rem;
+        height: 4rem; } }
   .portfolio-header {
     grid-row: 1/ -1;
     padding: 3rem;
     background-image: url(../img/project-vr-modal1.jpg);
     margin: 3rem;
-    background-size: cover; }
+    background-size: cover;
+    background-position: top; }
+    @media only screen and (max-width: 50em) {
+      .portfolio-header {
+        margin: 0;
+        height: 135%; } }
   .portfolio-title-box {
     padding: 3em 0 3em 3em;
     color: white; }
@@ -366,6 +378,12 @@ nav {
     border: black solid .1rem;
     margin-top: 4rem;
     margin-right: 13rem; }
+    @media only screen and (max-width: 78em) {
+      .portfolio-sideImg {
+        width: 17rem; } }
+    @media only screen and (max-width: 50em) {
+      .portfolio-sideImg {
+        display: none; } }
   .portfolio-subtitle {
     font-size: 1rem; }
   .portfolio-content {
