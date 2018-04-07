@@ -117,7 +117,7 @@
 
             @media only screen and (max-width: $bp-small-next) {
                 grid-template-columns: 2fr 1fr;
-                // grid-template-rows: none;
+                grid-template-rows: 150% 1fr;
             }
         }
     }
@@ -150,7 +150,9 @@
 
         @media only screen and (max-width: $bp-small-next) {
             margin: 0;
-            height: 135%;
+            grid-column: 1 / -1;
+            height: 100%;
+            grid-row: 1 / 2;
         }
     }
     // .header-two {
@@ -202,8 +204,8 @@
         grid-row: 2 / 3;
 
         @media only screen and (max-width: $bp-small-next) {
-            // grid-column: 2 / 3;
-            // grid-row: none;
+            grid-row: 2 / -1;
+            grid-column: 1 / -1;
         }
     }
 

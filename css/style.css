@@ -329,7 +329,8 @@ nav {
       grid-gap: 1rem; }
       @media only screen and (max-width: 50em) {
         .portfolio-modal.is-open {
-          grid-template-columns: 2fr 1fr; } }
+          grid-template-columns: 2fr 1fr;
+          grid-template-rows: 150% 1fr; } }
   .modal-close {
     background: white;
     position: fixed;
@@ -356,7 +357,9 @@ nav {
     @media only screen and (max-width: 50em) {
       .portfolio-header {
         margin: 0;
-        height: 135%; } }
+        grid-column: 1 / -1;
+        height: 100%;
+        grid-row: 1 / 2; } }
   .portfolio-title-box {
     padding: 3em 0 3em 3em;
     color: white; }
@@ -389,6 +392,10 @@ nav {
   .portfolio-content {
     padding: 1em;
     grid-row: 2 / 3; }
+    @media only screen and (max-width: 50em) {
+      .portfolio-content {
+        grid-row: 2 / -1;
+        grid-column: 1 / -1; } }
   .portfolio-full-width {
     width: 100vw;
     max-width: initial;
@@ -444,6 +451,14 @@ nav {
   letter-spacing: .7rem;
   text-align: center;
   margin-bottom: 2rem; }
+
+.heading-3 {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  font-family: 'Rufina', serif;
+  line-height: 1.4;
+  text-transform: uppercase;
+  padding: 1rem; }
 
 .heading-4 {
   font-family: 'Oxygen', sans-serif;
