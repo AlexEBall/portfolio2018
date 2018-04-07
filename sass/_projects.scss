@@ -1,0 +1,193 @@
+.content {
+    background-color: yellowgreen;
+    padding: 2rem 4rem;
+    
+    // @media only screen and (max-width: 710px) {
+    //     grid-template-columns: repeat()
+    // }
+}
+
+.portfolio {
+    text-align: center;
+    background: #f3f3f3;
+    padding: 5em 0;
+}
+
+.portfolio-items {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    grid-gap: .8rem;
+    margin: 0 auto; 
+}
+
+.portfolio-item {
+    position: relative;
+    overflow: hidden;
+    flex: 1 1 20rem;
+    .portfolio-image {
+        display: block;
+        width: 100%;
+        object-fit: cover;
+    }
+    figcaption {
+        position: absolute;
+        top: 100%;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        padding: 1em;
+        background: rgba(black, .75);
+        color: white;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        transition: top ease-in-out 250ms;
+    }
+    &:hover figcaption,
+    &:focus figcaption {
+        top: 0;
+    }
+}
+
+.portfolio-title {
+    color: white;
+    font-size: 2.5rem;
+    margin-bottom: auto;
+}
+
+.portfolio-desc {
+    display: none;
+}
+
+.portfolio-link {
+    color: white; // font-weight: $fw-;
+    font-size: 1.1rem;
+    text-decoration: none;
+    border-bottom: 3px solid #fff;
+    align-self: flex-start;
+    &::after {
+        // content: url(../img/arrow-white.svg);
+        display: inline-block;
+        height: .8em;
+        width: .8em;
+        margin-left: .5em;
+    }
+}
+
+@supports (display: grid) {
+    .portfolio-items {
+        @media only screen and (max-width: 950px) {
+            // display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
+        .portfolio-item.featured {
+            grid-column: 1 / span 2;
+            grid-row: 1 / span 2;
+        }
+        .featured {
+            .portfolio-title {
+                font-size: 5rem;
+            }
+            .portfolio-desc {
+                display: block;
+            }
+        }
+    }
+    .portfolio-modal {
+        position: fixed;
+        z-index: 10;
+        top: 2em;
+        bottom: 2em;
+        left: 2em;
+        right: 2em;
+        background: white;
+        box-shadow: 0 0 0 3em rgba(black, .5);
+        overflow-y: scroll;
+        overflow-x: hidden;
+        display: none;
+        &.is-open {
+            display: grid;
+            grid-template-rows: .3fr .5fr .2fr;
+            grid-template-columns: 4fr 1fr;
+            grid-gap: 1rem;
+        }
+    }
+    .modal-close {
+        background: white;
+        position: fixed;
+        left: 1rem;
+        top: 1rem;
+        border: 0;
+        width: 3rem;
+        height: 3rem;
+        padding: .4rem 0 0;
+        border-radius: 50%;
+        cursor: pointer;
+        box-shadow: 0 0 .5rem rgba(black, .5);
+    }
+    .portfolio-header {
+        grid-row: 1/ -1;
+        padding: 3rem;
+        background-image: url(../img/project-vr-modal1.jpg);
+        margin: 3rem;
+        background-size: cover;
+    }
+    // .header-two {
+    //     background-image: url(../img/portfolio-02.jpg);
+    // }
+    .portfolio-title-box {
+        padding: 3em 0 3em 3em;
+        color: white;
+        .portfolio-title {
+            font-size: 3.5rem;
+            display: inline-block;
+            &::after {
+                content: '';
+                display: block;
+                height: 1px;
+                margin: .5em 0;
+                background: white;
+                width: 100%;
+            }
+        }
+    }
+    .portfolio-sideImg {
+        grid-column: 2 / 3;
+        width: 20rem;
+        padding: 1rem;
+        transform: scaleX(1.7);
+        border: black solid .1rem;
+        margin-top: 4rem;
+        margin-right: 13rem;
+    }
+    .portfolio-subtitle {
+        font-size: 1rem;
+    }
+    .portfolio-content {
+        padding: 1em;
+        grid-row: 2 / 3;
+    }
+    .portfolio-full-width {
+        width: 100vw;
+        max-width: initial;
+        margin: 2em calc(50% - 50vw);
+        height: 20vh;
+        object-fit: cover;
+    }
+    @keyframes modalIn {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+    @keyframes modalOut {
+        0% {
+            opacity: 1;
+        }
+        100% {
+            opacity: 0;
+        }
+    }
+}

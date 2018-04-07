@@ -1,0 +1,58 @@
+$bp-largest: 78em; //1200px
+$bp-medium: 60em;   //960px
+$bp-small: 54.9em; //875px
+$bp-small-next: 50em; //800px
+$bp-small-almost-mobile: 45em; //720px
+$bp-mobile: 41.25em; //660px
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+
+    @media only screen and (max-width: $bp-largest) {
+        font-size: 67%;
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+        font-size: 55.5%;
+    }
+
+    @media only screen and (max-width: $bp-small-next) {
+        font-size: 50%;
+    }
+
+    @media only screen and (max-width: $bp-small-almost-mobile) {
+        font-size: 45%;
+    }
+}
+
+body {
+    margin: 3rem;
+
+    @media only screen and (max-width: $bp-largest) {
+        margin: 0;
+    }
+}
+
+.container {
+    // background-color: lightblue; 
+    display: grid;
+    grid-template-rows: 1fr repeat(4, min-content);
+
+    @media only screen and (max-width: $bp-largest) {
+        grid-template-rows: 1fr 64.5rem repeat(3, min-content);
+    }
+}
+
+//1200px bp 
