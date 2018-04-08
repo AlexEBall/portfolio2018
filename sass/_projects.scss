@@ -14,7 +14,6 @@
     grid-template-columns: repeat(4, 1fr); 
     grid-gap: .8rem;
     margin: 0 auto; 
-    background: rgba(0, 0, 0, .5);
 }
 
 .portfolio-item {
@@ -35,7 +34,7 @@
         right: 0;
         left: 0;
         padding: 1em;
-        background: rgba(black, .75);
+        background: rgba($color-scheme-primary, .75);
         color: white;
         text-align: left;
         display: flex;

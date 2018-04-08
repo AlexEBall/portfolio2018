@@ -85,12 +85,13 @@ body {
         grid-column: 2 / 3;
         justify-content: space-around; } }
   .footer__icon {
-    fill: #fff;
+    fill: #EBECE4;
     height: 2.8rem;
     width: 2.8rem;
     transition: all .2s; }
     .footer__icon:hover {
-      transform: scale(1.5); }
+      transform: scale(1.5);
+      fill: #F0A202; }
 
 .heroArea {
   display: grid;
@@ -216,12 +217,12 @@ nav {
     font-size: 1.6rem;
     font-weight: 500;
     text-transform: uppercase;
-    color: orange;
+    color: #AAAA67;
     margin: 0 2.5rem;
     display: inline-block;
     text-decoration: none; }
     nav a:hover {
-      color: yellow; }
+      color: #7C7C4B; }
 
 .menu-bar {
   cursor: pointer; }
@@ -247,8 +248,7 @@ nav {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: .8rem;
-  margin: 0 auto;
-  background: rgba(0, 0, 0, 0.5); }
+  margin: 0 auto; }
 
 .portfolio-item {
   position: relative;
@@ -265,7 +265,7 @@ nav {
     right: 0;
     left: 0;
     padding: 1em;
-    background: rgba(0, 0, 0, 0.75);
+    background: rgba(170, 170, 103, 0.75);
     color: white;
     text-align: left;
     display: flex;
@@ -478,7 +478,8 @@ nav {
   @media only screen and (max-width: 41.25em) {
     .heading-5 {
       letter-spacing: 0;
-      font-size: 1.9rem; } }
+      font-size: 1.9rem;
+      color: #AAAA67; } }
 
 .heading-paragraph {
   padding: 1.5rem;

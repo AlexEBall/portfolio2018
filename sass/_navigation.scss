@@ -39,13 +39,13 @@ nav {
         font-size: 1.6rem;
         font-weight: 500;
         text-transform: uppercase;
-        color: orange;
+        color: $color-scheme-primary;
         margin: 0 2.5rem;
         display: inline-block;
         text-decoration: none; 
 
         &:hover {
-            color: yellow;
+            color: $color-scheme-primary-dark;
         }
     }
 }

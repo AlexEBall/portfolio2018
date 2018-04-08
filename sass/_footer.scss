@@ -64,13 +64,14 @@
     }
 
     &__icon {
-        fill: #fff;
+        fill: $color-scheme-white;
         height: 2.8rem;
         width: 2.8rem;
         transition: all .2s;
 
         &:hover {
             transform: scale(1.5);
+            fill: $color-scheme-highlight;
         }
 
     }
