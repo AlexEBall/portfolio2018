@@ -45,7 +45,8 @@ nav {
         text-decoration: none; 
 
         &:hover {
-            color: $color-scheme-primary-dark;
+            color: $color-scheme-highlight;
+            border-bottom: .1rem solid $color-scheme-highlight;
         }
     }
 }
@@ -53,7 +54,7 @@ nav {
 .menu-bar {
     cursor: pointer;
     span {
-        color: black;
+        color: $color-scheme-black;
         font-size: 24px;
     }
 }

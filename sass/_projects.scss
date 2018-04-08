@@ -3,17 +3,11 @@
     background-color: $color-scheme-section-light;
 }
 
-.portfolio {
-    text-align: center;
-    background: #f3f3f3;
-    padding: 5em 0;
-}
-
 .portfolio-items {
     display: grid;
     grid-template-columns: repeat(4, 1fr); 
     grid-gap: .8rem;
-    margin: 0 auto; 
+    margin: 3rem auto; 
 }
 
 .portfolio-item {
@@ -33,7 +27,7 @@
         bottom: 0;
         right: 0;
         left: 0;
-        padding: 1em;
+        padding: 1rem;
         background: rgba($color-scheme-primary, .75);
         color: white;
         text-align: left;
@@ -49,9 +43,11 @@
 }
 
 .portfolio-title {
-    color: white;
+    color: $color-scheme-white;
+    text-shadow: .2rem .1rem $color-scheme-highlight;
     font-size: 2.5rem;
     margin-bottom: auto;
+
 }
 
 .portfolio-desc {
@@ -59,17 +55,16 @@
 }
 
 .portfolio-link {
-    color: white; 
-    font-size: 1.1rem;
+    color: $color-scheme-white; 
     text-decoration: none;
-    border-bottom: 3px solid #fff;
+    border-bottom: .3rem solid $color-scheme-white;
     align-self: flex-start;
 
     &::after {
         display: inline-block;
-        height: .8em;
-        width: .8em;
-        margin-left: .5em;
+        height: .8rem;
+        width: .8rem;
+        margin-left: .5rem;
     }
 }
 
@@ -97,12 +92,12 @@
     .portfolio-modal {
         position: fixed;
         z-index: 10;
-        top: 2em;
-        bottom: 2em;
-        left: 2em;
-        right: 2em;
-        background: white;
-        box-shadow: 0 0 0 3em rgba(black, .5);
+        top: 2rem;
+        bottom: 2rem;
+        left: 2rem;
+        right: 2rem;
+        background: $color-scheme-white;
+        box-shadow: 0 0 0 3rem rgba($color-scheme-brown, .5);
         overflow-y: scroll;
         overflow-x: hidden;
         display: none;
@@ -121,7 +116,7 @@
     }
 
     .modal-close {
-        background: white;
+        background: $color-scheme-white;
         position: fixed;
         left: 1rem;
         top: 1rem;
@@ -131,7 +126,7 @@
         padding: .4rem 0 0;
         border-radius: 50%;
         cursor: pointer;
-        box-shadow: 0 0 .5rem rgba(black, .5);
+        box-shadow: 0 0 .5rem rgba($color-scheme-brown, .5);
 
         @media only screen and (max-width: $bp-medium) {
             width: 4rem;
@@ -158,18 +153,20 @@
     // }
 
     .portfolio-title-box {
-        padding: 3em 0 3em 3em;
-        color: white;
+        padding: 3rem 0 3rem 3rem;
 
         .portfolio-title {
             font-size: 3.5rem;
             display: inline-block;
+            color: $color-scheme-highlight;
+            text-shadow: .2rem .1rem $color-scheme-black;
+
             &::after {
                 content: '';
                 display: block;
-                height: 1px;
-                margin: .5em 0;
-                background: white;
+                height: .1rem;
+                margin: .5rem 0;
+                background: $color-scheme-black;
                 width: 100%;
             }
         }
@@ -177,16 +174,15 @@
     .portfolio-sideImg {
         grid-column: 2 / 3;
         width: 20rem;
-        padding: 1rem;
-        transform: scaleX(1.7);
-        border: black solid .1rem;
+        padding: 0;
+        transform: rotate(5deg) scaleX(1.4);
+        border: $color-scheme-black solid .1rem;
+        box-shadow: 1rem 1rem 2rem $color-scheme-black;
         margin-top: 4rem;
         margin-right: 13rem;
 
         @media only screen and (max-width: $bp-largest) {
             width: 17rem;
-            // grid-row: 1 / 3;
-            // align-self: center;
         }
 
         @media only screen and (max-width: $bp-small-next) {
@@ -196,23 +192,17 @@
 
     .portfolio-subtitle {
         font-size: 1rem;
+        color: $color-scheme-black;
     }
     .portfolio-content {
         padding: 1em;
         grid-row: 2 / 3;
+        color: $color-scheme-black;
 
         @media only screen and (max-width: $bp-small-next) {
             grid-row: 2 / -1;
             grid-column: 1 / -1;
         }
-    }
-
-    .portfolio-full-width {
-        width: 100vw;
-        max-width: initial;
-        margin: 2em calc(50% - 50vw);
-        height: 20vh;
-        object-fit: cover;
     }
 
     @keyframes modalIn {

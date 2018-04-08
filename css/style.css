@@ -131,7 +131,7 @@ body {
       height: 90%; }
   .hobbies__text {
     position: absolute;
-    color: white; }
+    color: #EBECE4; }
     .hobbies__text--1 {
       width: 41%;
       font-size: 1.6rem;
@@ -222,12 +222,13 @@ nav {
     display: inline-block;
     text-decoration: none; }
     nav a:hover {
-      color: #7C7C4B; }
+      color: #F0A202;
+      border-bottom: 0.1rem solid #F0A202; }
 
 .menu-bar {
   cursor: pointer; }
   .menu-bar span {
-    color: black;
+    color: #172121;
     font-size: 24px; }
 
 .main-menubar {
@@ -239,16 +240,11 @@ nav {
   padding: 2rem 4rem;
   background-color: #D3D0CB; }
 
-.portfolio {
-  text-align: center;
-  background: #f3f3f3;
-  padding: 5em 0; }
-
 .portfolio-items {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: .8rem;
-  margin: 0 auto; }
+  margin: 3rem auto; }
 
 .portfolio-item {
   position: relative;
@@ -264,7 +260,7 @@ nav {
     bottom: 0;
     right: 0;
     left: 0;
-    padding: 1em;
+    padding: 1rem;
     background: rgba(170, 170, 103, 0.75);
     color: white;
     text-align: left;
@@ -276,7 +272,8 @@ nav {
     top: 0; }
 
 .portfolio-title {
-  color: white;
+  color: #EBECE4;
+  text-shadow: 0.2rem 0.1rem #F0A202;
   font-size: 2.5rem;
   margin-bottom: auto; }
 
@@ -284,16 +281,15 @@ nav {
   display: none; }
 
 .portfolio-link {
-  color: white;
-  font-size: 1.1rem;
+  color: #EBECE4;
   text-decoration: none;
-  border-bottom: 3px solid #fff;
+  border-bottom: 0.3rem solid #EBECE4;
   align-self: flex-start; }
   .portfolio-link::after {
     display: inline-block;
-    height: .8em;
-    width: .8em;
-    margin-left: .5em; }
+    height: .8rem;
+    width: .8rem;
+    margin-left: .5rem; }
 
 @supports (display: grid) {
   @media only screen and (max-width: 60em) {
@@ -309,12 +305,12 @@ nav {
   .portfolio-modal {
     position: fixed;
     z-index: 10;
-    top: 2em;
-    bottom: 2em;
-    left: 2em;
-    right: 2em;
-    background: white;
-    box-shadow: 0 0 0 3em rgba(0, 0, 0, 0.5);
+    top: 2rem;
+    bottom: 2rem;
+    left: 2rem;
+    right: 2rem;
+    background: #EBECE4;
+    box-shadow: 0 0 0 3rem rgba(120, 115, 111, 0.5);
     overflow-y: scroll;
     overflow-x: hidden;
     display: none; }
@@ -328,7 +324,7 @@ nav {
           grid-template-columns: 2fr 1fr;
           grid-template-rows: 150% 1fr; } }
   .modal-close {
-    background: white;
+    background: #EBECE4;
     position: fixed;
     left: 1rem;
     top: 1rem;
@@ -338,7 +334,7 @@ nav {
     padding: .4rem 0 0;
     border-radius: 50%;
     cursor: pointer;
-    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.5); }
+    box-shadow: 0 0 0.5rem rgba(120, 115, 111, 0.5); }
     @media only screen and (max-width: 60em) {
       .modal-close {
         width: 4rem;
@@ -357,24 +353,26 @@ nav {
         height: 100%;
         grid-row: 1 / 2; } }
   .portfolio-title-box {
-    padding: 3em 0 3em 3em;
-    color: white; }
+    padding: 3rem 0 3rem 3rem; }
     .portfolio-title-box .portfolio-title {
       font-size: 3.5rem;
-      display: inline-block; }
+      display: inline-block;
+      color: #F0A202;
+      text-shadow: 0.2rem 0.1rem #172121; }
       .portfolio-title-box .portfolio-title::after {
         content: '';
         display: block;
-        height: 1px;
-        margin: .5em 0;
-        background: white;
+        height: .1rem;
+        margin: .5rem 0;
+        background: #172121;
         width: 100%; }
   .portfolio-sideImg {
     grid-column: 2 / 3;
     width: 20rem;
-    padding: 1rem;
-    transform: scaleX(1.7);
-    border: black solid .1rem;
+    padding: 0;
+    transform: rotate(5deg) scaleX(1.4);
+    border: #172121 solid 0.1rem;
+    box-shadow: 1rem 1rem 2rem #172121;
     margin-top: 4rem;
     margin-right: 13rem; }
     @media only screen and (max-width: 78em) {
@@ -384,20 +382,16 @@ nav {
       .portfolio-sideImg {
         display: none; } }
   .portfolio-subtitle {
-    font-size: 1rem; }
+    font-size: 1rem;
+    color: #172121; }
   .portfolio-content {
     padding: 1em;
-    grid-row: 2 / 3; }
+    grid-row: 2 / 3;
+    color: #172121; }
     @media only screen and (max-width: 50em) {
       .portfolio-content {
         grid-row: 2 / -1;
         grid-column: 1 / -1; } }
-  .portfolio-full-width {
-    width: 100vw;
-    max-width: initial;
-    margin: 2em calc(50% - 50vw);
-    height: 20vh;
-    object-fit: cover; }
   @keyframes modalIn {
     0% {
       opacity: 0; }
@@ -427,7 +421,7 @@ nav {
   grid-row-gap: 1.5rem;
   grid-column-gap: 2.5rem; }
   .feature__icon {
-    fill: purple;
+    fill: #F0A202;
     width: 4.5rem;
     height: 4.5rem;
     grid-row: 1 / span 2;
@@ -450,7 +444,9 @@ nav {
   font-size: 4.5rem;
   letter-spacing: .7rem;
   text-align: center;
-  margin-bottom: 2rem; }
+  margin-bottom: 2rem;
+  color: #78736F;
+  text-shadow: 0.1rem 0.1rem #172121; }
   @media only screen and (max-width: 41.25em) {
     .heading-2 {
       margin-top: 2rem; } }
@@ -467,7 +463,9 @@ nav {
   font-family: 'Oxygen', sans-serif;
   font-size: 3rem;
   line-height: 3.2rem;
-  color: #F0A202; }
+  color: #172121; }
+  .heading-4-bold {
+    color: #F0A202; }
 
 .heading-5 {
   font-family: 'Rufina', serif;
@@ -489,6 +487,14 @@ nav {
     .heading-paragraph {
       color: #EBECE4;
       text-shadow: 0.2rem 0.1rem #172121; } }
+
+.heading-modal {
+  font-family: 'Rufina', serif;
+  font-size: 3rem; }
+
+.heading-link {
+  font-family: 'Oxygen', sans-serif;
+  font-size: 1.5rem; }
 
 .paragraph {
   font-size: 1.7rem;

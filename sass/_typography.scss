@@ -18,6 +18,8 @@
         letter-spacing: .7rem;
         text-align: center;
         margin-bottom: 2rem;
+        color: $color-scheme-brown;
+        text-shadow: .1rem .1rem $color-scheme-black;
 
         @media only screen and (max-width: $bp-mobile) {
             margin-top: 2rem;
@@ -37,7 +39,11 @@
         font-family: 'Oxygen', sans-serif;
         font-size: 3rem;
         line-height: 3.2rem;
-        color: $color-scheme-highlight;
+        color: $color-scheme-black;
+
+        &-bold {
+            color: $color-scheme-highlight;
+        }
     }
 
     &-5 {
@@ -64,6 +70,16 @@
             text-shadow: 0.2rem 0.1rem $color-scheme-black;
         }
     }
+
+    &-modal {
+        font-family: 'Rufina', serif;
+        font-size: 3rem;
+    }
+
+    &-link {
+        font-family: 'Oxygen', sans-serif;
+        font-size: 1.5rem;
+    }
 }
 
 .paragraph {
@@ -76,7 +92,7 @@
 
         &::first-letter {
             font-size: 4rem;
-            color: #8A2BE2;
+            color: $color-scheme-highlight-bold;
             vertical-align: bottom;
             line-height: 3rem;
         }

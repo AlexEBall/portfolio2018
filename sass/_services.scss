@@ -6,9 +6,7 @@
 .features {
     font-size: 1.4rem;
     margin: 4rem 6rem;
-    display: grid; // this was non responsive
-    // grid-template-columns: repeat(3, 1fr);
-    // this one will be responsive
+    display: grid; 
     grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
     grid-gap: 6rem;
     align-items: start; // grid-column: col-start / col-end;
@@ -19,8 +17,9 @@
     grid-template-columns: min-content 1fr;
     grid-row-gap: 1.5rem;
     grid-column-gap: 2.5rem;
+
     &__icon {
-        fill: purple;
+        fill: $color-scheme-highlight;
         width: 4.5rem;
         height: 4.5rem; // -1 is the last of the explicit grid not implicit
         grid-row: 1 / span 2;
