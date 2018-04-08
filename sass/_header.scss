@@ -111,7 +111,7 @@
         column-gap: 3.5rem;
 
         @media only screen and (max-width: $bp-mobile) {
-            letter-spacing: 2px;
+            letter-spacing: .2rem;
             align-self: end;
             display: flex;
             grid-column: 1 / -1;
@@ -121,7 +121,7 @@
     }
 
     @media only screen and (max-width: $bp-small-almost-mobile) {
-        height: 110%;
+        height: 115%;
     }
 
     @media only screen and (max-width: $bp-mobile) {

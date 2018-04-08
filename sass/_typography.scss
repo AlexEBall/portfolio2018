@@ -8,7 +8,7 @@
     color: $color-scheme-black;
 
         @media only screen and (max-width: $bp-mobile) {
-            margin-left: 2rem;
+            margin-left: 3rem;
         }
     }
 
@@ -64,6 +64,7 @@
         padding: 1.5rem;
         font-size: 1.6rem;
         color: $color-scheme-black;
+        line-height: 2rem;
 
         @media only screen and (max-width: $bp-mobile) {
             color: $color-scheme-white;
