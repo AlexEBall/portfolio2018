@@ -5,6 +5,16 @@ $bp-small-next: 50em; //800px
 $bp-small-almost-mobile: 45em; //720px
 $bp-mobile: 41.25em; //660px
 
+$color-scheme-primary: #AAAA67;
+$color-scheme-primary-light: #C8C89E;
+$color-scheme-primary-dark: #7C7C4B;
+$color-scheme-white: #EBECE4;
+$color-scheme-brown: #78736F;
+$color-scheme-black: #172121;
+$color-scheme-highlight: #F0A202;
+
+$color-scheme-section-light: #D3D0CB;
+
 * {
     margin: 0;
     padding: 0;
@@ -19,6 +29,7 @@ $bp-mobile: 41.25em; //660px
 html {
     box-sizing: border-box;
     font-size: 62.5%;
+    background: linear-gradient(to right bottom, $color-scheme-primary-light, $color-scheme-primary);
 
     @media only screen and (max-width: $bp-largest) {
         font-size: 67%;

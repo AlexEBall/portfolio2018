@@ -1,10 +1,6 @@
 .content {
-    background-color: yellowgreen;
     padding: 2rem 4rem;
-    
-    // @media only screen and (max-width: 710px) {
-    //     grid-template-columns: repeat()
-    // }
+    background-color: $color-scheme-section-light;
 }
 
 .portfolio {
@@ -18,17 +14,20 @@
     grid-template-columns: repeat(4, 1fr); 
     grid-gap: .8rem;
     margin: 0 auto; 
+    background: rgba(0, 0, 0, .5);
 }
 
 .portfolio-item {
     position: relative;
     overflow: hidden;
     flex: 1 1 20rem;
+
     .portfolio-image {
         display: block;
         width: 100%;
         object-fit: cover;
     }
+
     figcaption {
         position: absolute;
         top: 100%;
@@ -43,6 +42,7 @@
         flex-direction: column;
         transition: top ease-in-out 250ms;
     }
+
     &:hover figcaption,
     &:focus figcaption {
         top: 0;
@@ -60,13 +60,13 @@
 }
 
 .portfolio-link {
-    color: white; // font-weight: $fw-;
+    color: white; 
     font-size: 1.1rem;
     text-decoration: none;
     border-bottom: 3px solid #fff;
     align-self: flex-start;
+
     &::after {
-        // content: url(../img/arrow-white.svg);
         display: inline-block;
         height: .8em;
         width: .8em;
@@ -78,7 +78,6 @@
     .portfolio-items {
 
         @media only screen and (max-width: $bp-medium) {
-            // display: grid;
             grid-template-columns: repeat(2, 1fr);
         }
 
