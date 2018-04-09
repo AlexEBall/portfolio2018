@@ -28,7 +28,7 @@
         right: 0;
         left: 0;
         padding: 1rem;
-        background: rgba($color-scheme-primary, .75);
+        background: rgba($color-scheme-highlight, .75);
         color: white;
         text-align: left;
         display: flex;
@@ -44,20 +44,38 @@
 
 .portfolio-title {
     color: $color-scheme-white;
-    text-shadow: .2rem .1rem $color-scheme-highlight;
+    text-shadow: .2rem .1rem $color-scheme-black;
     font-size: 2.5rem;
-    margin-bottom: auto;
-
+    font-family: 'Rufina', serif;
 }
 
 .portfolio-desc {
-    display: none;
+    color: $color-scheme-black;
+    margin-bottom: auto;
+    font-size: 1.8rem;
+    font-family: 'Oxygen', sans-serif;
+
+    @media only screen and (max-width: $bp-largest) {
+        font-size: 1.3rem;
+    }
+
+     @media only screen and (max-width: $bp-medium) {
+         font-size: 2rem;
+     }
+
+    @media only screen and (max-width: $bp-mobile) {
+        font-size: 1.7rem;
+    }
+
+    &-featured {
+        font-size: 2.1rem;
+    }
 }
 
 .portfolio-link {
     color: $color-scheme-white; 
     text-decoration: none;
-    border-bottom: .3rem solid $color-scheme-white;
+    border-bottom: .3rem solid $color-scheme-primary-dark;
     align-self: flex-start;
 
     &::after {
@@ -81,7 +99,15 @@
         }
         .featured {
             .portfolio-title {
-                font-size: 5rem;
+                font-size: 3.2rem;
+
+                 @media only screen and (max-width: $bp-largest) {
+                     font-size: 4.2rem;
+                 }
+
+                @media only screen and (max-width: $bp-medium) {
+                    font-size: 5rem;
+                }
             }
             .portfolio-desc {
                 display: block;

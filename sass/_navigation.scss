@@ -43,10 +43,12 @@ nav {
         margin: 0 2.5rem;
         display: inline-block;
         text-decoration: none; 
+        transition: all .2s;
 
         &:hover {
             color: $color-scheme-highlight;
             border-bottom: .1rem solid $color-scheme-highlight;
+            transform: scale(1.1);
         }
     }
 }
