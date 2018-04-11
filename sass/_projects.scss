@@ -162,10 +162,29 @@
     .portfolio-header {
         grid-row: 1/ -1;
         padding: 3rem;
-        background-image: url(../img/project-vr-modal1.jpg);
         margin: 3rem;
         background-size: cover;
         background-position: top;
+
+        &-one {
+            background-image: url(../img/project-vr-modal1.jpg);
+        }
+
+        &-two {
+            background-image: url(../img/project-providence-modal.jpg);
+        }
+
+        &-three {
+            background-image: url(../img/project-voyages-modal.jpg);
+        }
+
+        &-four {
+            background-image: url(../img/project-journalist-modal.jpg)
+        }
+
+        &-five {
+            background-image: url(../img/project-cafam-1.jpg);
+        }
 
         @media only screen and (max-width: $bp-small-next) {
             margin: 0;

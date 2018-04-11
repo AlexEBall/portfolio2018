@@ -364,10 +364,19 @@ nav {
   .portfolio-header {
     grid-row: 1/ -1;
     padding: 3rem;
-    background-image: url(../img/project-vr-modal1.jpg);
     margin: 3rem;
     background-size: cover;
     background-position: top; }
+    .portfolio-header-one {
+      background-image: url(../img/project-vr-modal1.jpg); }
+    .portfolio-header-two {
+      background-image: url(../img/project-providence-modal.jpg); }
+    .portfolio-header-three {
+      background-image: url(../img/project-voyages-modal.jpg); }
+    .portfolio-header-four {
+      background-image: url(../img/project-journalist-modal.jpg); }
+    .portfolio-header-five {
+      background-image: url(../img/project-cafam-1.jpg); }
     @media only screen and (max-width: 52em) {
       .portfolio-header {
         margin: 0;
@@ -567,7 +576,7 @@ nav {
     padding: 1rem; }
     .paragraph-modalContent::first-letter {
       font-size: 4rem;
-      color: #8A2BE2;
+      color: #AAAA67;
       vertical-align: bottom;
       line-height: 3rem; }
   .paragraph__content {
