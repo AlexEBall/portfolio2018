@@ -179,7 +179,8 @@
     // }
 
     .portfolio-title-box {
-        padding: 3rem 0 3rem 3rem;
+        padding: 0 0 3rem 0;
+        // background-color: rgba($color-scheme-brown, .5);
 
         .portfolio-title {
             font-size: 3.5rem;
@@ -217,7 +218,8 @@
     }
 
     .portfolio-subtitle {
-        font-size: 1rem;
+        font-size: 2.3rem;
+        // text-shadow: .1rem .1rem $color-scheme-black;
         color: $color-scheme-black;
     }
     .portfolio-content {
@@ -228,6 +230,39 @@
         @media only screen and (max-width: $bp-small-next) {
             grid-row: 2 / -1;
             grid-column: 1 / -1;
+        }
+    }
+
+    .appLink {
+        &:link,
+        &:visited {
+            z-index: 100;
+            font-size: 1.8rem;
+            text-decoration: none;
+            margin-top: 1rem;
+            display: inline-block;
+            color: $color-scheme-primary;
+            text-shadow: .1rem .1rem $color-scheme-brown; // background-image: linear-gradient(120deg, transparent 0%, transparent 50%, $color-scheme-white 50%);
+            transition: all .3s;
+        }
+        &:hover,
+        &:active {
+            // background-position: 100%;
+            color: $color-scheme-highlight;
+            transform: translateX(1rem);
+        }
+    }
+
+    .weblink {
+        &:link,
+        &:visited {
+            z-index: 100;
+            text-decoration: none;
+            color: $color-scheme-primary;
+        }
+        &:hover,
+        &:active {
+            color: $color-scheme-highlight;
         }
     }
 

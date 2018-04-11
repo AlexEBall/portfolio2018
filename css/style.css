@@ -375,7 +375,7 @@ nav {
         height: 100%;
         grid-row: 1 / 2; } }
   .portfolio-title-box {
-    padding: 3rem 0 3rem 3rem; }
+    padding: 0 0 3rem 0; }
     .portfolio-title-box .portfolio-title {
       font-size: 3.5rem;
       display: inline-block;
@@ -404,7 +404,7 @@ nav {
       .portfolio-sideImg {
         display: none; } }
   .portfolio-subtitle {
-    font-size: 1rem;
+    font-size: 2.3rem;
     color: #172121; }
   .portfolio-content {
     padding: 1em;
@@ -414,6 +414,24 @@ nav {
       .portfolio-content {
         grid-row: 2 / -1;
         grid-column: 1 / -1; } }
+  .appLink:link, .appLink:visited {
+    z-index: 100;
+    font-size: 1.8rem;
+    text-decoration: none;
+    margin-top: 1rem;
+    display: inline-block;
+    color: #AAAA67;
+    text-shadow: 0.1rem 0.1rem #78736F;
+    transition: all .3s; }
+  .appLink:hover, .appLink:active {
+    color: #F0A202;
+    transform: translateX(1rem); }
+  .weblink:link, .weblink:visited {
+    z-index: 100;
+    text-decoration: none;
+    color: #AAAA67; }
+  .weblink:hover, .weblink:active {
+    color: #F0A202; }
   @keyframes modalIn {
     0% {
       opacity: 0; }
@@ -507,7 +525,8 @@ nav {
   padding: 1.5rem;
   font-size: 1.6rem;
   color: #172121;
-  line-height: 2rem; }
+  line-height: 2rem;
+  font-family: 'Rufina', serif; }
   @media only screen and (max-width: 43.5rem) {
     .heading-paragraph {
       color: #EBECE4;

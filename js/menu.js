@@ -10,4 +10,13 @@ $(document).ready(function () {
         $(".main-menu").addClass('mobile-menu');
     });
 
-    });
+    $(".appLink").on('click', (e) => {
+        e.preventDefault();
+
+        // const href = $(this).attr('activeElement');
+        // console.log(href.attr('href'));
+
+        // window.location.href()
+    })
+
+});
