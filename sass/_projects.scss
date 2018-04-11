@@ -172,6 +172,19 @@
 
         &-two {
             background-image: url(../img/project-providence-modal.jpg);
+            background-position-y: -33rem;
+
+            @media only screen and (max-width: $bp-largest) {
+                background-position-y: 0rem;
+            }
+
+            @media only screen and (max-width: $bp-small-next) {
+                background-position-y: -12rem;
+            }
+
+            @media only screen and (max-width: $bp-mobile) {
+                background-position-y: 0rem;
+            }
         }
 
         &-three {
