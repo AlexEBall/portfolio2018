@@ -13,10 +13,21 @@ $(document).ready(function () {
     $(".appLink").on('click', (e) => {
         e.preventDefault();
 
-        // const href = $(this).attr('activeElement');
-        // console.log(href.attr('href'));
+        console.log('hit');
+        const href = $(this)[0].activeElement.href;
+        // console.log(href);
 
-        // window.location.href()
-    })
+        window.location.href = href;
+    });
+
+    $(".weblink").on('click', (e) => {
+        e.preventDefault();
+
+        console.log('hit');
+        const href = $(this)[0].activeElement.href;
+        // console.log(href);
+
+        window.location.href = href;
+    });
 
 });
