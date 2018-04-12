@@ -255,6 +255,7 @@
         &-left {
             align-items: flex-end;
         }
+        
         &-modal {
             @media only screen and (max-width: $bp-small-next) {
                 padding: 0 7rem 3rem 0;
