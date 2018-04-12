@@ -98,15 +98,16 @@
             grid-row: 1 / span 2;
         }
         .featured {
+
             .portfolio-title {
                 font-size: 3.2rem;
 
                  @media only screen and (max-width: $bp-largest) {
-                     font-size: 4.2rem;
+                     font-size: 3rem;
                  }
 
                 @media only screen and (max-width: $bp-medium) {
-                    font-size: 5rem;
+                    font-size: 3.2rem;
                 }
             }
             .portfolio-desc {
@@ -137,6 +138,10 @@
             @media only screen and (max-width: $bp-small-next) {
                 grid-template-columns: 2fr 1fr;
                 grid-template-rows: 150% 1fr;
+            }
+
+            @media only screen and (max-width: $bp-real-mobile) {
+                grid-template-rows: 75% 1fr;
             }
         }
     }
@@ -185,14 +190,45 @@
             @media only screen and (max-width: $bp-mobile) {
                 background-position-y: 0rem;
             }
+
+            @media only screen and (max-width: $bp-real-mobile) {
+                background-position-y: -1rem;
+            }
         }
 
         &-three {
-            background-image: url(../img/project-voyages-modal.jpg);
+            background-image: url(../img/project-voyages-modal2.jpg);
+            // background-position-y: -30rem;
+
+            @media only screen and (max-width: $bp-largest) {
+                background-position-y: 0rem;
+                background-position-x: -22rem;
+            }
+
+            @media only screen and (max-width: $bp-real-mobile) {
+                background-position-x: -16rem;
+            }
         }
 
         &-four {
-            background-image: url(../img/project-journalist-modal.jpg)
+            background-image: url(../img/project-journalist-modal.jpg);
+
+            @media only screen and (max-width: $bp-largest) {
+                background-position-x: -20rem;
+            }
+
+            @media only screen and (max-width: $bp-small-next) {
+                background-position-y: -5rem;
+                background-position-x: 0;
+            }
+
+            @media only screen and (max-width: $bp-small-almost-mobile) {
+                background-position-y: 0rem;
+            }
+
+            @media only screen and (max-width: $bp-real-mobile) {
+                background-position-y: -5rem;
+            }
         }
 
         &-five {
@@ -212,7 +248,26 @@
 
     .portfolio-title-box {
         padding: 0 0 3rem 0;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
         // background-color: rgba($color-scheme-brown, .5);
+        &-left {
+            align-items: flex-end;
+        }
+        &-modal {
+            @media only screen and (max-width: $bp-small-next) {
+                padding: 0 7rem 3rem 0;
+            }
+
+            @media only screen and (max-width: $bp-small-almost-mobile) {
+                padding: 0 2rem 3rem 0;
+            }
+
+            @media only screen and (max-width: $bp-mobile) {
+                padding: 0 0 3rem 0;
+            }
+        }
 
         .portfolio-title {
             font-size: 3.5rem;
@@ -247,12 +302,16 @@
         @media only screen and (max-width: $bp-small-next) {
             display: none;
         }
+
+        &-square {
+            height: 20rem;
+        }
     }
 
     .portfolio-subtitle {
-        font-size: 2.3rem;
-        // text-shadow: .1rem .1rem $color-scheme-black;
+        font-size: 2.5rem;
         color: $color-scheme-black;
+        text-shadow: .2rem .1rem rgba($color-scheme-white, .4)
     }
     .portfolio-content {
         padding: 1em;

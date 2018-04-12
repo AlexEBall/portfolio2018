@@ -318,10 +318,10 @@ nav {
     font-size: 3.2rem; }
     @media only screen and (max-width: 78em) {
       .portfolio-items .featured .portfolio-title {
-        font-size: 4.2rem; } }
+        font-size: 3rem; } }
     @media only screen and (max-width: 61.8em) {
       .portfolio-items .featured .portfolio-title {
-        font-size: 5rem; } }
+        font-size: 3.2rem; } }
   .portfolio-items .featured .portfolio-desc {
     display: block; }
   .portfolio-modal {
@@ -345,6 +345,9 @@ nav {
         .portfolio-modal.is-open {
           grid-template-columns: 2fr 1fr;
           grid-template-rows: 150% 1fr; } }
+      @media only screen and (max-width: 27.5em) {
+        .portfolio-modal.is-open {
+          grid-template-rows: 75% 1fr; } }
   .modal-close {
     background: #EBECE4;
     position: fixed;
@@ -381,10 +384,33 @@ nav {
       @media only screen and (max-width: 43.5rem) {
         .portfolio-header-two {
           background-position-y: 0rem; } }
+      @media only screen and (max-width: 27.5em) {
+        .portfolio-header-two {
+          background-position-y: -1rem; } }
     .portfolio-header-three {
-      background-image: url(../img/project-voyages-modal.jpg); }
+      background-image: url(../img/project-voyages-modal2.jpg); }
+      @media only screen and (max-width: 78em) {
+        .portfolio-header-three {
+          background-position-y: 0rem;
+          background-position-x: -22rem; } }
+      @media only screen and (max-width: 27.5em) {
+        .portfolio-header-three {
+          background-position-x: -16rem; } }
     .portfolio-header-four {
       background-image: url(../img/project-journalist-modal.jpg); }
+      @media only screen and (max-width: 78em) {
+        .portfolio-header-four {
+          background-position-x: -20rem; } }
+      @media only screen and (max-width: 52em) {
+        .portfolio-header-four {
+          background-position-y: -5rem;
+          background-position-x: 0; } }
+      @media only screen and (max-width: 47em) {
+        .portfolio-header-four {
+          background-position-y: 0rem; } }
+      @media only screen and (max-width: 27.5em) {
+        .portfolio-header-four {
+          background-position-y: -5rem; } }
     .portfolio-header-five {
       background-image: url(../img/project-cafam-1.jpg); }
     @media only screen and (max-width: 52em) {
@@ -394,7 +420,21 @@ nav {
         height: 100%;
         grid-row: 1 / 2; } }
   .portfolio-title-box {
-    padding: 0 0 3rem 0; }
+    padding: 0 0 3rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; }
+    .portfolio-title-box-left {
+      align-items: flex-end; }
+    @media only screen and (max-width: 52em) {
+      .portfolio-title-box-modal {
+        padding: 0 7rem 3rem 0; } }
+    @media only screen and (max-width: 47em) {
+      .portfolio-title-box-modal {
+        padding: 0 2rem 3rem 0; } }
+    @media only screen and (max-width: 43.5rem) {
+      .portfolio-title-box-modal {
+        padding: 0 0 3rem 0; } }
     .portfolio-title-box .portfolio-title {
       font-size: 3.5rem;
       display: inline-block;
@@ -422,9 +462,12 @@ nav {
     @media only screen and (max-width: 52em) {
       .portfolio-sideImg {
         display: none; } }
+    .portfolio-sideImg-square {
+      height: 20rem; }
   .portfolio-subtitle {
-    font-size: 2.3rem;
-    color: #172121; }
+    font-size: 2.5rem;
+    color: #172121;
+    text-shadow: 0.2rem 0.1rem rgba(235, 236, 228, 0.4); }
   .portfolio-content {
     padding: 1em;
     grid-row: 2 / 3;
