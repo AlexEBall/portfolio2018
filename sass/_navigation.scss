@@ -65,4 +65,9 @@ nav {
     position: relative;
     display: flex;
     align-items: center;
+    // display: none;
+
+    // @media only screen and (max-width: $bp-largest) {
+    //     display: flex;
+    // }
 }
