@@ -36,6 +36,13 @@
         position: relative;
     }
 
+    &-title {
+        font-size: 4.5rem;
+        position: absolute;
+        right: 5rem;
+        top: 14rem;
+    }
+
     &__img {
         width: 100%;
         height: 100%;
