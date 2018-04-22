@@ -101,28 +101,42 @@
 
     &__name1 {
         grid-column: 2 / -1;
+
+        @media only screen and (max-width: $bp-mobile) {
+            grid-column: 3 / -1;
+        }
     }
     &__title1 {
         grid-column: 6 / -1;
+
+        @media only screen and (max-width: $bp-mobile) {
+            grid-column: 7 / -1;
+        }
     }
     &__name2,
     &__byline {
         grid-column: 4 / -1;
+
+        @media only screen and (max-width: $bp-mobile) {
+            grid-column: 5 / -1;
+        }
     }
     &__title2 {
         grid-column: 7 / -1;
+
+        @media only screen and (max-width: $bp-mobile) {
+            grid-column: 8 / -1;
+        }
     }
     &__paragraph {
         grid-column: 4 / -1;
-        column-count: 2;
-        column-gap: 3.5rem;
 
         @media only screen and (max-width: $bp-mobile) {
             letter-spacing: .2rem;
             align-self: end;
             display: flex;
             grid-column: 1 / -1;
-            margin: 1rem;
+            grid-row: 6 / -1;
 
         }
     }
